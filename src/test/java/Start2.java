@@ -9,7 +9,14 @@ import org.testng.annotations.Test;
         @Test
         public void goToWiki(){
             wd=new ChromeDriver();
-            wd.get("https://ru.wikipedia.org/wiki/");
+            wd.navigate().to("https://ru.wikipedia.org/wiki/");
+            wd.navigate().back();
+            wd.navigate().forward();
+            wd.navigate().refresh();
+
+            wd.close();
+            wd.quit();
+
         }
     }
 
